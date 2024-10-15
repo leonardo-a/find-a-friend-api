@@ -1,0 +1,23 @@
+{
+  "name": "find-a-friend-api",
+  "version": "1.0.0",
+  "description": "Código fonte do desafio da trilha NodeJS 'Implementando o SOLID'",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "22.7.5",
+    "prisma": "5.20.0",
+    "tsx": "4.19.1",
+    "typescript": "5.6.3"
+  },
+  "dependencies": {
+    "bcryptjs": "2.4.3",
+    "fastify": "5.0.0",
+    "zod": "3.23.8"
+  }
+}
