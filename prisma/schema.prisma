@@ -9,3 +9,22 @@ datasource db {
   provider = "sqlite"
   url      = env("DATABASE_URL")
 }
+
+model User {
+  id   Int    @id @default(autoincrement())
+  name String
+
+  Pet Pet[]
+
+  @@map("users")
+}
+
+model Pet {
+  id   Int    @id @default(autoincrement())
+  name String
+
+  user   User @relation(fields: [userId], references: [id])
+  userId Int
+
+  @@map("pets")
+}
