@@ -10,7 +10,7 @@ datasource db {
 model Org {
   id           String @id @default(uuid())
   ownerName    String @map("owner_name")
-  email        String
+  email        String @unique
   passwordHash String @map("password_hash")
   whatsapp     String
   cep          String
