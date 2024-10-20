@@ -26,7 +26,7 @@ model Org {
 model Pet {
   id                String @id @default(uuid())
   name              String
-  descriptions      String
+  description       String
   age               String
   size              String
   energyLevel       String @map("energy_level")
