@@ -5,10 +5,10 @@ type Overwrite = {
   id?: string
   orgId?: string
   age?: string
-  size?: string
-  energyLevel?: string
-  independenceLevel?: string
-  environment?: string
+  size?: 'small' | 'medium' | 'large'
+  energyLevel?: 'low' | 'medium' | 'high'
+  independenceLevel?: 'low' | 'medium' | 'high'
+  environment?: 'indoor' | 'outdoor'
 }
 
 export function makePet(overwrite: Overwrite = {}) {
