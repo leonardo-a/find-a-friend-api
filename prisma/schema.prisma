@@ -8,15 +8,15 @@ datasource db {
 }
 
 model Org {
-  id           String @id @default(uuid())
-  ownerName    String @map("owner_name")
-  email        String @unique
-  passwordHash String @map("password_hash")
-  whatsapp     String
-  cep          String
-  streetName   String @map("street_name")
-  state        String
-  city         String
+  id         String @id @default(uuid())
+  ownerName  String @map("owner_name")
+  email      String @unique
+  password   String @map("password_hash")
+  whatsapp   String
+  cep        String
+  streetName String @map("street_name")
+  state      String
+  city       String
 
   pets Pet[]
 

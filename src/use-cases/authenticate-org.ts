@@ -26,7 +26,7 @@ export class AuthenticateOrgUseCase {
       throw new UnauthorizedError()
     }
 
-    const doesPasswordMatchWithHash = await compare(password, org.passwordHash)
+    const doesPasswordMatchWithHash = await compare(password, org.password)
 
     if (!doesPasswordMatchWithHash) {
       throw new UnauthorizedError()

@@ -44,7 +44,7 @@ export class RegisterOrgUseCase {
       cep,
       city,
       ownerName,
-      passwordHash,
+      password: passwordHash,
       state,
       streetName,
       whatsapp,

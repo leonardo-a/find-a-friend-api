@@ -18,10 +18,7 @@ describe('Authenticate Org Use Case', () => {
     const password = '123456ab'
     const passwordHash = await hash(password, 6)
 
-    const org = await orgsRepository.create({
-      ...makeOrg(),
-      passwordHash,
-    })
+    const org = await orgsRepository.create(makeOrg({ password: passwordHash }))
 
     const { org: authenticatedOrg } = await sut.execute({
       email: org.email,
@@ -41,10 +38,7 @@ describe('Authenticate Org Use Case', () => {
     const password = '123456ab'
     const passwordHash = await hash(password, 6)
 
-    const org = await orgsRepository.create({
-      ...makeOrg(),
-      passwordHash,
-    })
+    const org = await orgsRepository.create(makeOrg({ password: passwordHash }))
 
     await expect(
       sut.execute({ email: org.email, password: '123456' }),
