@@ -1,9 +1,10 @@
 import { app } from './app'
+import { env } from './env'
 
 app
   .listen({
-    port: 3333,
-    host: '0.0.0.0',
+    host: env.HOST,
+    port: env.PORT,
   })
   .then(() => {
     console.log('HTTP server started!')
