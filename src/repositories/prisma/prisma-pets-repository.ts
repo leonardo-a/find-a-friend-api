@@ -18,7 +18,7 @@ export class PrismaPetsRepository implements PetsRepository {
     const pets = await prisma.pet.findMany({
       where: {
         age: params.age,
-        energyLevel: params.age,
+        energyLevel: params.energyLevel,
         independenceLevel: params.independenceLevel,
         environment: params.environment,
         size: params.size,

@@ -2,7 +2,7 @@ import type { Pet, Prisma } from '@prisma/client'
 
 export interface PetsFilters {
   city: string
-  age?: string
+  age?: number
   size?: string
   energyLevel?: string
   independenceLevel?: string

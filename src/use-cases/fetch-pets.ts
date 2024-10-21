@@ -3,7 +3,7 @@ import type { Pet } from '@prisma/client'
 
 interface FetchPetsUseCaseRequest {
   city: string
-  age?: string
+  age?: number
   size?: string
   energyLevel?: string
   independenceLevel?: string

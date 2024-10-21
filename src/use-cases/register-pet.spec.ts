@@ -18,12 +18,7 @@ describe('Register Pet Use Case', () => {
   })
 
   it('should be able to register a pet', async () => {
-    const org = makeOrg()
-
-    orgsRepository.items.push({
-      passwordHash: org.password,
-      ...org,
-    })
+    const org = await orgsRepository.create(makeOrg())
 
     const { pet } = await sut.execute(
       makePet({

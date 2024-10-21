@@ -6,7 +6,7 @@ import { ResourceNotFoundError } from './errors/resource-not-found-error'
 
 interface RegisterPetUseCaseRequest {
   orgId: string
-  age: string
+  age: number
   name: string
   size: string
   description: string
