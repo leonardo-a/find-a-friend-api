@@ -9,13 +9,13 @@ export async function registerOrg(
 ) {
   const registerOrgBodySchema = z.object({
     email: z.string().email(),
-    password: z.string().min(6),
+    password: z.string(),
     ownerName: z.string(),
-    cep: z.string().min(8),
+    cep: z.string(),
     city: z.string(),
     state: z.string(),
     streetName: z.string(),
-    whatsapp: z.string().min(10),
+    whatsapp: z.string(),
   })
 
   const { email, password, ownerName, cep, city, state, streetName, whatsapp } =
