@@ -36,4 +36,12 @@ describe('Register Pet Controller (E2E)', () => {
       petId: expect.any(String),
     })
   })
+
+  it('should not be able to register a pet without authorization', async () => {
+    const pet = makePet()
+
+    const response = await request(app.server).post('/pets').send(pet)
+
+    expect(response.statusCode).toEqual(401)
+  })
 })
